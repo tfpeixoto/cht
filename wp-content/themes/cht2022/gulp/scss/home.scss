@@ -1,0 +1,11 @@
+@import "components/variables";
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+@import "components/sobre";
+/*! purgecss start ignore */
+@import "components/pecas";
+/*! purgecss end ignore */
+@import "components/localizacao";
+@import "components/cta";
+@import "components/footer";

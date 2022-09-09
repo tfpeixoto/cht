@@ -1,6 +1,6 @@
 <?php
 
-//Chamar a tag title
+// Configs theme
 function cht_title_tag()
 {
   add_theme_support('title-tag');
@@ -8,6 +8,13 @@ function cht_title_tag()
   add_image_size('thumb-list', 350, 300, true);
 }
 add_action('after_setup_theme', 'cht_title_tag');
+
+// Script
+function cht_scripts()
+{
+  wp_enqueue_style('critital', get_template_directory_uri() . '/css/critical.css', array(), '1.0', 'all');
+}
+add_action('wp_enqueue_scripts', 'cht_scripts');
 
 // Registrar o Custom Navigation Walker
 require_once get_template_directory() . '/wp_bootstrap_navwalker.php';

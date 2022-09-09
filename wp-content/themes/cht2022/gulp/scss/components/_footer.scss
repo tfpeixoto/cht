@@ -1,0 +1,98 @@
+.footer {
+  background: $secondary;
+  color: white;
+  padding: 3rem 0;
+
+  a {
+    color: white;
+  }
+
+  &__marca {
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  &__contato {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__days {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      justify-content: flex-start;
+    }
+  }
+
+  &__social {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+
+    ul {
+      align-items: center;
+      display: flex;
+      margin: 0;
+
+      li {
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+
+  &__copy {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  &__address {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+  }
+
+  &__whatsapp {
+    background: url(../images/btn-whatsapp.png) no-repeat;
+    background-size: 100%;
+    bottom: 50px;
+    height: 83px;
+    position: fixed;
+    right: 0;
+    width: 150px;
+    z-index: 101;
+  }
+}

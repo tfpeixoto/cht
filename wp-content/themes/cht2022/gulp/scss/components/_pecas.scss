@@ -1,0 +1,58 @@
+.pecas {
+  background-color: $secondary;
+  background: url(../images/bg-pecas.png) no-repeat;
+  background-size: cover;
+  padding: 3rem 0;
+
+  h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-align: center;
+
+    &:after {
+      border-bottom: 5px solid #8e0e0e;
+      content: " ";
+      display: block;
+      height: 5px;
+      margin: 15px auto;
+      width: 180px;
+    }
+  }
+
+  .card {
+    border: none;
+
+    .card-body {
+      border-left: 10px solid #8e0e0e;
+      margin: 1.25rem 0;
+      padding: 0 1.25rem;
+    }
+
+    .card-footer {
+      background: white;
+      border: none;
+    }
+  }
+
+  .owl-nav {
+    button {
+      position: absolute;
+      top: 30%;
+
+      span {
+        color: white;
+        font-size: 4rem;
+      }
+
+      &.owl-prev{
+        left: -20px;
+      }
+
+      &.owl-next{
+        right: -20px;
+      }
+    }
+  }
+}
