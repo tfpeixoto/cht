@@ -75,9 +75,7 @@ require_once('header.php');
             if ($pecas->have_posts()) : while ($pecas->have_posts()) : $pecas->the_post(); ?>
 
                 <div class="card">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('thumb-list', array('class' => 'card-img-top')); ?>
-                  </a>
+                  <?php the_post_thumbnail('thumb-list', array('class' => 'card-img-top')); ?>
 
                   <div class="card-body">
                     <p class="card-title text-vermelho mb-1 label-ctegory">
