@@ -42,8 +42,8 @@
     </div>
 
     <a href="https://api.whatsapp.com/send?phone=5531971486378&text=Ol%C3%A1!" title="Entre em contato pelo Whatsapp" class="footer__whatsapp" target="_blank">
-      <div class="fixed-conversa">
-      </div>
+      <img src="<?= get_template_directory_uri(); ?>/images/icone-whatsapp.svg" width="32" height="28" alt="Whatsapp" />
+      Envie uma mensagem
     </a>
   </footer>
 
@@ -53,6 +53,36 @@
   ?>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>
+    jQuery.event.special.touchstart = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("touchstart", handle, {
+          passive: !ns.includes("noPreventDefault")
+        });
+      }
+    };
+    jQuery.event.special.touchmove = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("touchmove", handle, {
+          passive: !ns.includes("noPreventDefault")
+        });
+      }
+    };
+    jQuery.event.special.wheel = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("wheel", handle, {
+          passive: true
+        });
+      }
+    };
+    jQuery.event.special.mousewheel = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("mousewheel", handle, {
+          passive: true
+        });
+      }
+    };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/scripts.min.js"></script>
