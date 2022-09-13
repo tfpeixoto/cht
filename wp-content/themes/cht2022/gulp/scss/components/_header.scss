@@ -36,9 +36,42 @@
     background: transparent;
     display: flex;
     justify-content: space-between;
+
+    #nav-mobile {
+      &.show {
+        background-color: $primary;
+        border-radius: 10px;
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+          background: none;
+          margin-top: 0;
+          width: auto;
+        }
+
+        ul {
+          li {
+            border-bottom: 1px solid rgba($white, 0.2);
+            padding: 1rem 0;
+
+            @include media-breakpoint-up(md) {
+              border: none;
+            }
+
+            &:last-child {
+              border: none;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__menu {
+    width: 100%;
+
     a {
       border-radius: 5px;
       color: $white;
@@ -69,6 +102,8 @@
   }
 
   &__contatos {
+    width: 100%;
+
     a {
       align-items: center;
       color: $black;

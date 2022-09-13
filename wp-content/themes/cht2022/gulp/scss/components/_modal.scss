@@ -1,0 +1,41 @@
+.modal {
+  .modal-header {
+    background-color: $primary;
+    color: $white;
+    text-align: center;
+
+    button {
+      &.close {
+        color: $white;
+      }
+    }
+  }
+
+  .modal-body {
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    .wpcf7-text,
+    .wpcf7-textarea {
+      background-color: $soft-gray;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      font-family: Lato, sans-serif;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  .modal-footer {
+    border: none;
+    padding: 0 2rem;
+
+    .wpcf7-submit {
+      background-color: $primary;
+      color: $white;
+      width: 100%;
+    }
+  }
+}

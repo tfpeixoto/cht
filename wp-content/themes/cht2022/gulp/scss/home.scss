@@ -5,6 +5,8 @@
 @import "components/sobre";
 /*! purgecss start ignore */
 @import "components/pecas";
+@import "./node_modules/bootstrap/scss/modal";
+@import "components/modal";
 /*! purgecss end ignore */
 @import "components/localizacao";
 @import "components/cta";

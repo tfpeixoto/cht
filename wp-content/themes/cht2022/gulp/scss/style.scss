@@ -1,0 +1,10 @@
+@import "components/variables";
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+/*! purgecss start ignore */
+@import "./node_modules/bootstrap/scss/modal";
+@import "components/modal";
+/*! purgecss end ignore */
+@import "components/lista";
+@import "components/cta";
+@import "components/footer";
