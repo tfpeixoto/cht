@@ -1,0 +1,22 @@
+.cta{
+  background: $soft-gray;
+  color: $black;
+  padding: 3rem 0;
+
+  &__text{
+    text-align: center;
+    
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+
+    p{
+      font-weight: 700;
+      padding-bottom: 0;
+    }
+  }
+
+  &__button{
+    text-align: center;
+  }
+}

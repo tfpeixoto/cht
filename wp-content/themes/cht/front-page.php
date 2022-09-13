@@ -2,23 +2,27 @@
 /*
 Template Name: Home
 */
-get_header(); ?>
+$estiloPagina = 'style.css';
+require_once('header.php');
+?>
 
 <section id="sobre" class="container my-5">
   <div class="row d-flex justify-content-center align-items-center text-center text-md-left">
-    <?php query_posts('page_id=17'); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php query_posts('page_id=17');
+    if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <div class="col-11 col-md-6">
-      <h2 class="font-weight-bold mb-3"><?php the_title(); ?></h2>
-      
-      <?php the_content(); ?>
-    </div>
+        <div class="col-11 col-md-6">
+          <h2 class="font-weight-bold mb-3"><?php the_title(); ?></h2>
 
-    <div class="col-11 col-md-6">
-      <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid" alt="Estoque de peças da Casa do Honda e Toyota" />
-    </div>
+          <?php the_content(); ?>
+        </div>
 
-    <?php endwhile; endif; ?>
+        <div class="col-11 col-md-6">
+          <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid" width="540" height="405" alt="Foto do estoque de peças da Casa do Honda e Toyota" />
+        </div>
+
+    <?php endwhile;
+    endif; ?>
     <?php wp_reset_query(); ?>
   </div>
 </section>
@@ -33,29 +37,35 @@ get_header(); ?>
       <div class="col-12">
         <div class="card-deck">
           <div class="owl-carousel">
-            <?php query_posts('post_type=pecas&post_per_page=10'); ?>						
-						<?php if(have_posts()): ?>
-            <?php while(have_posts()): the_post(); ?>
-            
-            <div class="card">
-              <a href="<?php the_permalink(); ?>">
-                <img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" alt="<?php the_title(); ?>" />
-              </a>
+            <?php
+            $args = array(
+              'post_type' => 'pecas',
+              'post_per_page' => 10
+            );
+            $pecas = new WP_Query($args);
 
-              <div class="card-body">
-                <h5 class="card-title text-vermelho mb-1">
-                  <?php the_category( ', ' ); ?>
-                </h5>
-                <p class="font-weight-bold text-secondary mb-1"><?php the_title(); ?></p>
-                <p class="card-text"><?php the_content(); ?></p>
-              </div>
+            if ($pecas->have_posts()) : while ($pecas->have_posts()) : $pecas->the_post(); ?>
 
-              <div class="card-footer text-right">
-                <a href="#" role="button" class="btn btn-primary font-weight-bold" data-toggle="modal" data-target="#modalContato">Solicite informações <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+                <div class="card">
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('thumb-list', array('class' => 'card-img-top')); ?>
+                  </a>
 
-            <?php endwhile; endif; ?>
+                  <div class="card-body">
+                    <p class="card-title text-vermelho mb-1 label-ctegory">
+                      <?php the_category(', '); ?>
+                    </p>
+                    <p class="font-weight-bold text-secondary mb-1"><?php the_title(); ?></p>
+                    <p class="card-text"><?php the_content(); ?></p>
+                  </div>
+
+                  <div class="card-footer text-right">
+                    <a href="#" role="button" class="btn btn-primary font-weight-bold" data-toggle="modal" data-target="#modalContato">Solicite informações <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+
+            <?php endwhile;
+            endif; ?>
             <?php wp_reset_query(); ?>
           </div>
         </div>
@@ -73,19 +83,19 @@ get_header(); ?>
 <section id="localizacao" class="container my-5">
   <div class="row">
     <div class="col-12 col-md-6">
-      <img src="<?php bloginfo('template_url'); ?>/images/celular-endereco.png" class="img-fluid" alt="#" />
+      <img src="<?php bloginfo('template_url'); ?>/images/celular-endereco.png" width="540" height="608" class="img-fluid" alt="Telefone com o mapa da localização da loja" />
     </div>
 
     <div class="col-12 col-md-6">
       <div class="balao-contatos">
         <h3><i class="fas fa-map-marker-alt"></i> Visite nossa loja</h3>
         <p><a href="https://www.google.com/maps/place/Casa+do+Honda+e+Toyota/@-19.9126677,-43.9823035,17z/data=!3m1!4b1!4m5!3m4!1s0xa6976511d78925:0x6bcdd098a6074550!8m2!3d-19.9126728!4d-43.9801148" target="_blank">Av. Dom Pedro II, 4157 - Jardim Montanhês<br />
-        Belo Horizonte/MG, CEP 30810-190<br />
-        <small>(Clique para ver o mapa)</small></a></p>
+            Belo Horizonte/MG, CEP 30810-190<br />
+            <small>(Clique para ver o mapa)</small></a></p>
 
         <h3><i class="far fa-clock"></i> Horário de funcionamento</h3>
         <p>Segunda a sexta de 8h às 18h<br />
-        Sábado de 8h às 12h</p>
+          Sábado de 8h às 12h</p>
 
         <h3 class="text-phone float-md-left mr-1 mr-md-5">
           <a href="tel:3125340546" target="_blank"><i class="fas fa-phone"></i> <small>31</small> 2534.0546</a>
@@ -113,4 +123,6 @@ get_header(); ?>
   </div>
 </section>
 
-<?php get_footer(); ?>
+<?php
+require_once('footer.php');
+?>

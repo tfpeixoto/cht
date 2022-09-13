@@ -14,6 +14,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="google-site-verification" content="LXzT6pB4YEogn5ZTrT-UnymujYsljDE0lXswghdpNOU" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/style.css">
