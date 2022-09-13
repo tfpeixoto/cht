@@ -22,7 +22,7 @@
               <a href="https://www.instagram.com/casahondatoyota/" title="Instagram" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icone-instagram.svg" width="32" height="28" alt="Instagram" /></a>
             </li>
             <li class="list-inline-item">
-              <a href="https://api.whatsapp.com/send?phone=5531971486378&text=Ol%C3%A1!" title="Whatsapp" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icone-whatsapp.svg" width="32" height="28" alt="Whatsapp" /></a>
+              <a href="https://api.whatsapp.com/send?phone=553125340546&text=Ol%C3%A1!" title="Whatsapp" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icone-whatsapp.svg" width="32" height="28" alt="Whatsapp" /></a>
             </li>
           </ul>
         </div>
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <a href="https://api.whatsapp.com/send?phone=5531971486378&text=Ol%C3%A1!" title="Entre em contato pelo Whatsapp" class="footer__whatsapp" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=553125340546&text=Ol%C3%A1!" title="Entre em contato pelo Whatsapp" class="footer__whatsapp" target="_blank">
       <img src="<?= get_template_directory_uri(); ?>/images/icone-whatsapp.svg" width="32" height="28" alt="Whatsapp" />
       Envie uma mensagem
     </a>

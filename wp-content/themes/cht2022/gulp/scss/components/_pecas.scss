@@ -24,6 +24,11 @@
   .card {
     border: none;
 
+    h3{
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
     .card-body {
       border-left: 10px solid #8e0e0e;
       margin: 1.25rem 0;
