@@ -102,7 +102,13 @@
   }
 
   &__contatos {
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
+
+    ul{
+      margin-bottom: 0;
+    }
 
     a {
       align-items: center;
